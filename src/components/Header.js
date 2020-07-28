@@ -4,6 +4,9 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
+// Logo
+import logo from '../assets/images/logo.png';
+
 class Header extends React.Component {
     render() {
         return (
@@ -13,7 +16,7 @@ class Header extends React.Component {
                     className='header'
                 >
                     <Nav.Link>Characters</Nav.Link>
-                    <img src='' alt='' />
+                    <img src={logo} alt='' />
                     <Nav.Link>Worlds</Nav.Link>
                 </Navbar>
             </div>
