@@ -13,7 +13,7 @@ class Characters extends React.Component {
     }
 
     nextPage = () => {
-        this.setState({ page: `${this.state.info.next}` })
+        this.setState({ page: this.state.info.next })
     }
 
     componentDidMount() {
