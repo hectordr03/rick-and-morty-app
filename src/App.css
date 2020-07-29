@@ -1,9 +1,9 @@
 /* Header styling */
 
 .header {
-    display: flex;
-    
-    justify-content: space-between;
+  display: flex;
+
+  justify-content: space-between;
 }
 
 /* End of Header styling */
@@ -11,7 +11,7 @@
 /* Characters comp styling */
 
 .characters {
-    text-align: center;
+  text-align: center;
 }
 
 /* End of Characters comp styling */
