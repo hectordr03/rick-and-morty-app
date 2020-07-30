@@ -4,7 +4,7 @@ import './App.css';
 // Components
 import Header from './components/Header';
 import Characters from './components/Characters';
-// import Worlds from './components/Worlds';
+import Worlds from './components/Worlds';
 
 class App extends React.Component {
   render() {
@@ -12,7 +12,7 @@ class App extends React.Component {
       <div className="App">
         <Header />
         {/* <Characters /> */}
-        <Worlds />
+        {/* <Worlds /> */}
       </div>
     );
   }

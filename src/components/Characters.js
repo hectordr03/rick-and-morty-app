@@ -32,6 +32,7 @@ class Characters extends React.Component {
             .catch(err => console.error(err.message))
     }
 
+
     nextPage = () => {
         axios.get(this.state.next)
             .then(res => {
