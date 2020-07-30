@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import NextBtn from './NextBtn';
 
 class Characters extends React.Component {
     constructor(props) {
@@ -12,16 +13,12 @@ class Characters extends React.Component {
         }
     }
 
-    nextPage = () => {
-        this.setState({ page: this.state.info.next })
-    }
-
     componentDidMount() {
         axios.get(this.state.page)
             .then(res => {
-                this.setState({ results: res.data.results, info: res.data.info})
+                this.setState({ results: res.data.results, info: res.data.info })
                 console.log(`Next page is: ${this.state.info.next}`)
-                console.log(this.state.results)
+                // console.log(this.state.results)
                 console.log(this.state.info)
             })
             .catch(err => console.error(err.message))
@@ -30,9 +27,9 @@ class Characters extends React.Component {
 
     // ********** I need a function that will update state after a button click **********
 
-    // nextPage = () => {
-    //     this.setState({ page:`${this.state.info.next}`  })
-    // }
+    nextPage = () => {
+        this.setState({ page: this.state.info.next })
+    }
 
     render() {
         return (
@@ -48,7 +45,10 @@ class Characters extends React.Component {
                         </li>
                     ))}
                 </ul>
-                {/* <button onClick={this.nextPage()}>Next</button> */}
+                {/* <NextBtn
+                    page={this.state.info.next}
+                /> */}
+                <button onClick={this.nextPage()}>Next</button>
 
             </div>
         )

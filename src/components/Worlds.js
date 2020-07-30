@@ -15,19 +15,22 @@ class Worlds extends React.Component {
         axios.get('https://rickandmortyapi.com/api/location/')
             .then(res => {
                 this.setState({ results: res.data.results });
-                console.log(this.state.results)
+                this.setState({ info: res.data.info })
+                // console.log(this.state.results)
+                // console.log(this.state.info)
             })
             .catch(err => console.error(err.message))
     }
+
 
     render() {
         return (
             <div>
                 {this.state.results.map((place) => (
-                        <li key={place.id}>
-                            {place.name}
-                        </li>
-                    ))}
+                    <li key={place.id}>
+                        {place.name}
+                    </li>
+                ))}
             </div>
         )
     }
