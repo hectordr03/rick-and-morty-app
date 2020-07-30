@@ -64,6 +64,8 @@ class Characters extends React.Component {
                 <h3>Characters</h3>
                 <p>Search bar under page title</p>
                 <p>Character list</p>
+                <button onClick={(event) => this.prevPage(event)}>Back</button>
+                <button onClick={(event) => this.nextPage(event)}>Next</button>
                 <ul>
                     {this.state.results.map((character) => (
                         <li key={character.id}>

@@ -11,8 +11,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <Characters />
-        {/* <Worlds /> */}
+        {/* <Characters /> */}
+        <Worlds />
       </div>
     );
   }
