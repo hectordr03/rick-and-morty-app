@@ -10,6 +10,10 @@ li {
   justify-content: space-between;
 }
 
+#nav-logo {
+  height: 8em;
+}
+
 /* End of Header styling */
 
 /* Characters comp styling */
@@ -35,3 +39,12 @@ li {
 } */
 
 /* End of Characters comp styling */
+
+/* Home component styling */
+.welcome-message {
+  text-align: center;
+  border: 1px solid black;
+
+}
+
+/* End of Home component styling */
