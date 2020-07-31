@@ -13,7 +13,7 @@ class Header extends React.Component {
             <div>
                 <Navbar bg='dark' className='header'>
                     <Nav.Link>Characters</Nav.Link>
-                    <img src={logo} alt='' />
+                    <img src={logo} alt=''/>
                     <Nav.Link>Worlds</Nav.Link>
                 </Navbar>
             </div>

@@ -1,6 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 
+// Bootstrap imports
+import Card from 'react-bootstrap/Card';
+
 class Characters extends React.Component {
     constructor(props) {
         super(props);
@@ -25,8 +28,8 @@ class Characters extends React.Component {
                     next: res.data.info.next,
                     prev: res.data.info.prev
                 })
-                console.log(`Next page is: ${this.state.info.next}`)
-                // console.log(this.state.results)
+                // console.log(`Next page is: ${this.state.info.next}`)
+                console.log(this.state.results)
                 console.log(this.state.info)
             })
             .catch(err => console.error(err.message))
@@ -67,12 +70,33 @@ class Characters extends React.Component {
                 <p>Character list</p>
                 <button onClick={(event) => this.prevPage(event)}>Back</button>
                 <button onClick={(event) => this.nextPage(event)}>Next</button>
-                <ul>
+                <ul className='character-list'>
                     {this.state.results.map((character) => (
-                        <li key={character.id}>
+                        <Card key={character.id} className='cards' bg='info'>
+                            {/* <li key={character.id}>
                             {character.name}
+                            <br />
                             <img src={character.image} alt='' />
-                        </li>
+                            <ul>
+                                <li>Status: {character.status}</li>
+                                <li>Species: {character.species}</li>
+                                <li>Origin: {character.origin.name}</li>
+                                <li>Current location: {character.location.name}</li>
+                            </ul>
+                        </li> */}
+                            <Card.Img src={character.image} alt='' className='images' />
+                            <Card.Body>
+                                <Card.Title>{character.name}</Card.Title>
+                                <Card.Text>
+                                    <ul>
+                                        <li>Status: {character.status}</li>
+                                        <li>Species: {character.species}</li>
+                                        <li>Origin: {character.origin.name}</li>
+                                        <li>Current location: {character.location.name}</li>
+                                    </ul>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
                     ))}
                 </ul>
                 <button onClick={(event) => this.prevPage(event)}>Back</button>

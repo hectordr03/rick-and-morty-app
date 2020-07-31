@@ -1,3 +1,7 @@
+li {
+  list-style: none;
+}
+
 /* Header styling */
 
 .header {
@@ -13,5 +17,22 @@
 .characters {
   text-align: center;
 }
+
+.character-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.cards {
+  height: auto;
+  width: 20em;
+
+  margin: 1em 1em;
+}
+
+/* .images {  
+  max-height: auto;
+  max-width: 50em;
+} */
 
 /* End of Characters comp styling */
