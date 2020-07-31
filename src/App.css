@@ -41,10 +41,29 @@ li {
 /* End of Characters comp styling */
 
 /* Home component styling */
+
 .welcome-message {
   text-align: center;
   border: 1px solid black;
+  background-color: #919eab;
 
+  height: 20em;
+  width: 50em;
+
+}
+
+.home {
+  background-image: url('./assets/images/rick-and-morty-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  height: 100vh;
+  width: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* End of Home component styling */

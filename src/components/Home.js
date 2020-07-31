@@ -1,5 +1,8 @@
 import React from 'react';
 
+// Bootstrap imports
+import Modal from 'react-bootstrap/Modal'
+
 class Home extends React.Component {
     render() {
         return (
