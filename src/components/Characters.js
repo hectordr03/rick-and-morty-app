@@ -65,9 +65,7 @@ class Characters extends React.Component {
     render() {
         return (
             <div className='characters' >
-                <h3>Characters</h3>
-                <p>Search bar under page title</p>
-                <p>Character list</p>
+                <h1>Characters</h1>
                 <button onClick={(event) => this.prevPage(event)}>Back</button>
                 <button onClick={(event) => this.nextPage(event)}>Next</button>
                 <ul className='character-list'>
