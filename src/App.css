@@ -45,7 +45,7 @@ li {
 .welcome-message {
   text-align: center;
   border: 1px solid black;
-  background-color: #919eab;
+  background-color: #919eabcd;
 
   height: 20em;
   width: 50em;
