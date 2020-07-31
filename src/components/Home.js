@@ -4,7 +4,7 @@ class Home extends React.Component {
     redner() {
         return (
             <div>
-
+                
             </div>
         )
     }

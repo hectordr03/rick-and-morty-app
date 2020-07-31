@@ -73,27 +73,14 @@ class Characters extends React.Component {
                 <ul className='character-list'>
                     {this.state.results.map((character) => (
                         <Card key={character.id} className='cards' bg='info'>
-                            {/* <li key={character.id}>
-                            {character.name}
-                            <br />
-                            <img src={character.image} alt='' />
-                            <ul>
-                                <li>Status: {character.status}</li>
-                                <li>Species: {character.species}</li>
-                                <li>Origin: {character.origin.name}</li>
-                                <li>Current location: {character.location.name}</li>
-                            </ul>
-                        </li> */}
                             <Card.Img src={character.image} alt='' className='images' />
                             <Card.Body>
                                 <Card.Title>{character.name}</Card.Title>
                                 <Card.Text>
-                                    <ul>
-                                        <li>Status: {character.status}</li>
-                                        <li>Species: {character.species}</li>
-                                        <li>Origin: {character.origin.name}</li>
-                                        <li>Current location: {character.location.name}</li>
-                                    </ul>
+                                    <li>Status: {character.status}</li>
+                                    <li>Species: {character.species}</li>
+                                    <li>Origin: {character.origin.name}</li>
+                                    <li>Current location: {character.location.name}</li>
                                 </Card.Text>
                             </Card.Body>
                         </Card>
