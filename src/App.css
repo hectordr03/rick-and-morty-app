@@ -79,3 +79,8 @@ li {
 }
 
 /* End of Welcome component styling */
+
+a:hover{
+  color: white;
+  text-decoration: none;
+}
