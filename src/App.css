@@ -56,12 +56,13 @@ li {
   align-items: center;
 }
 
-.location-link {
+.link {
   color: white;
   border: 3px solid red;
   height: 25em;
   width: 20em;
   background-color: rgba(0, 0, 0, 0.728);
+  text-align: center;
 }
 
 #location-image {

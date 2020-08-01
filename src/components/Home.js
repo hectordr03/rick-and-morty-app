@@ -15,11 +15,11 @@ class Home extends React.Component {
         return (
             <div className='home'>
                 {/* <Welcome /> */}
-                <a href='#' className='location-link'>
+                <a href='#' className='link'>
                     <h3>Worlds</h3>
                     <img src={locationImg} alt='' id='location-image'/>
                 </a>
-                <div className='location-link'>
+                <div className='link'>
                     <h3>Characters</h3>
                     {/* <img src={characterImg} alt='' id='location-image'/> */}
                 </div>

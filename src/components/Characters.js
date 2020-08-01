@@ -4,6 +4,8 @@ import axios from 'axios';
 // Bootstrap imports
 import Card from 'react-bootstrap/Card';
 
+import NextPage from '../components/NextPage'
+
 class Characters extends React.Component {
     constructor(props) {
         super(props);
@@ -86,6 +88,15 @@ class Characters extends React.Component {
                 </ul>
                 <button onClick={(event) => this.prevPage(event)}>Back</button>
                 <button onClick={(event) => this.nextPage(event)}>Next</button>
+
+                {/* Testing functional component */}
+
+                <NextPage 
+                    next={this.state.next}
+                    prev={this.state.prev}
+                     />
+
+                {/* End of test */}
 
             </div>
         )
