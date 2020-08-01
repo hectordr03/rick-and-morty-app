@@ -2,16 +2,16 @@ li {
   list-style: none;
 }
 
-/* Header styling */
+/* HeaderNav styling */
 
-.header {
+.header-nav {
   display: flex;
-
-  justify-content: space-between;
+  justify-content: center;
 }
 
 #nav-logo {
   height: 8em;
+  /* justify-content: center; */
 }
 
 /* End of Header styling */

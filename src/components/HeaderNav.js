@@ -10,10 +10,10 @@ import logo from '../assets/images/logo.png';
 const HeaderNav = () => {
     return (
         <div>
-            <Navbar bg='dark' className='header'>
-                <Nav.Link>Characters</Nav.Link>
-                <img src={logo} alt='' id='nav-logo' />
-                <Nav.Link>Worlds</Nav.Link>
+            <Navbar bg='dark' className='header-nav'>
+                <Nav.Link href='/'>
+                    <img src={logo} alt='' id='nav-logo' />
+                </Nav.Link>
             </Navbar>
         </div>
     )
