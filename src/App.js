@@ -17,8 +17,8 @@ const App = () => {
       <div className="App">
         <HeaderNav />
         <Route path='/' exact component={Home} />
-        <Route path='/characters' component={Characters} />
         <Route path='/worlds' component={Worlds} />
+        <Route path='/characters' component={Characters} />
       </div>
     </Router>
   );
