@@ -11,19 +11,17 @@ import Worlds from './components/Worlds';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 
-class App extends React.Component {
-  render() {
-    return (
-      <Router>
-        <div className="App">
-          <HeaderNav />
-          <Route path='/' exact component={Home} />
-          <Route path='/characters' component={Characters} />
-          <Route path='/worlds' component={Worlds} />
-        </div>
-      </Router>
-    );
-  }
+const App = () => {
+  return (
+    <Router>
+      <div className="App">
+        <HeaderNav />
+        <Route path='/' exact component={Home} />
+        <Route path='/characters' component={Characters} />
+        <Route path='/worlds' component={Worlds} />
+      </div>
+    </Router>
+  );
 }
 
 export default App;
