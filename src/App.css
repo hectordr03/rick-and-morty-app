@@ -59,13 +59,13 @@ li {
 .link {
   color: white;
   border: 3px solid red;
-  height: 25em;
+  height: 30em;
   width: 20em;
   background-color: rgba(0, 0, 0, 0.728);
   text-align: center;
 }
 
-#location-image {
+.link-images {
   max-width: 100%;
   max-height: 100%;
 }

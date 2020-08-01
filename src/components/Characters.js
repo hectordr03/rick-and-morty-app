@@ -26,13 +26,13 @@ class Characters extends React.Component {
             .then(res => {
                 this.setState({
                     results: res.data.results,
-                    info: res.data.info,
                     next: res.data.info.next,
                     prev: res.data.info.prev
                 })
                 // console.log(`Next page is: ${this.state.info.next}`)
-                console.log(this.state.results)
-                console.log(this.state.info)
+                console.log(this.state.prev)
+                console.log(this.state.next)
+                console.log(this.state.url)
             })
             .catch(err => console.error(err.message))
     }
@@ -43,7 +43,6 @@ class Characters extends React.Component {
             .then(res => {
                 this.setState({
                     results: res.data.results,
-                    info: res.data.info,
                     next: res.data.info.next,
                     prev: res.data.info.prev
                 })
@@ -56,7 +55,6 @@ class Characters extends React.Component {
             .then(res => {
                 this.setState({
                     results: res.data.results,
-                    info: res.data.info,
                     next: res.data.info.next,
                     prev: res.data.info.prev
                 })
@@ -94,7 +92,8 @@ class Characters extends React.Component {
                 <NextPage 
                     next={this.state.next}
                     prev={this.state.prev}
-                     />
+                    page={this.state.url}
+                    />
 
                 {/* End of test */}
 
