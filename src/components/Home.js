@@ -8,15 +8,20 @@ import Welcome from '../components/Welcome'
 
 // Images
 import locationImg from '../assets/images/r&m-locations.png'
+// import characterImg from '../assets/images/r&m-characters-image.png'
 
 class Home extends React.Component {
     render() {
         return (
             <div className='home'>
                 {/* <Welcome /> */}
-                <div className='location-link'>
-                    <h3>Wha-wha *burps* What's out there? Let's go check it out Morty</h3>
+                <a href='#' className='location-link'>
+                    <h3>Worlds</h3>
                     <img src={locationImg} alt='' id='location-image'/>
+                </a>
+                <div className='location-link'>
+                    <h3>Characters</h3>
+                    {/* <img src={characterImg} alt='' id='location-image'/> */}
                 </div>
             </div>
         )
