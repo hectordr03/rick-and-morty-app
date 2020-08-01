@@ -9,6 +9,11 @@ class Characters extends React.Component {
     constructor(props) {
         super(props);
 
+        // Set initial state
+            // url is initial API call
+            // API data is saved in "results"
+            // next and prev save the API calls for the following and previous page of characters
+            
         this.state = {
             url: 'https://rickandmortyapi.com/api/character/?page=1',
             results: [],
@@ -31,7 +36,6 @@ class Characters extends React.Component {
             })
             .catch(err => console.error(err.message))
     }
-
 
     nextPage = () => {
         axios.get(this.state.next)

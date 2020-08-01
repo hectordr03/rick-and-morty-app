@@ -12,13 +12,13 @@ class Home extends React.Component {
         return (
             <div className='home'>
                 {/* <Welcome /> */}
-                <a href='/worlds' className='links'>
-                    <h3>Worlds</h3>
-                    <img src={locationImg} alt='' className='link-images'/>
-                </a>
                 <a href='/characters' className='links'>
                     <h3>Characters</h3>
                     <img src={characterImg} alt='' className='link-images'/>
+                </a>
+                <a href='/worlds' className='links'>
+                    <h3>Worlds</h3>
+                    <img src={locationImg} alt='' className='link-images'/>
                 </a>
             </div>
         )
