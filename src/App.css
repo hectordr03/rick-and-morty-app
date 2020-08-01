@@ -7,6 +7,7 @@ li {
 .header-nav {
   display: flex;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.879);
 }
 
 #nav-logo {
@@ -56,13 +57,17 @@ li {
   align-items: center;
 }
 
-.link {
+.links {
   color: white;
   border: 3px solid red;
   height: 30em;
   width: 20em;
-  background-color: rgba(0, 0, 0, 0.728);
+  background-color: rgba(0, 0, 0, 0.767);
   text-align: center;
+}
+
+.links:hover {
+  background-color: #4194a7b1;
 }
 
 .link-images {

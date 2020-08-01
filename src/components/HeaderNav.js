@@ -10,7 +10,7 @@ import logo from '../assets/images/logo.png';
 const HeaderNav = () => {
     return (
         <div>
-            <Navbar bg='dark' className='header-nav'>
+            <Navbar className='header-nav'>
                 <Nav.Link href='/'>
                     <img src={logo} alt='' id='nav-logo' />
                 </Nav.Link>
