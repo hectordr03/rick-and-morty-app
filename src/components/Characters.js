@@ -23,6 +23,7 @@ class Characters extends React.Component {
             results: [],
             next: '',
             prev: '',
+            episode: [],
 
             modalIsOn: false,
         }
@@ -38,7 +39,6 @@ class Characters extends React.Component {
                     next: res.data.info.next,
                     prev: res.data.info.prev,
                 })
-                console.log(this.state.results)
             })
             .catch(err => console.error(err.message))
     }
@@ -108,9 +108,6 @@ class Characters extends React.Component {
                             <Modal show={this.state.modalIsOn}>
                                 <Modal.Header>Episode list</Modal.Header>
                                 <Modal.Body>
-                                    <ul>
-                                        
-                                    </ul>
                                 </Modal.Body>
                                 <Modal.Footer>
                                     <Button onClick={() => this.hideModal()}>Close</Button>
