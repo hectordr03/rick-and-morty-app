@@ -57,7 +57,7 @@ class Worlds extends React.Component {
     render() {
         return (
             <div className='worlds'>
-                <h1>Worlds and locations</h1>
+                <h1 className='title'>Worlds and locations</h1>
 
                 <div className='buttons'>
                     <Button size='lg' onClick={(event) => this.prevPage(event)}>Prev</Button>

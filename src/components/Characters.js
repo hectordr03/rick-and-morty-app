@@ -63,7 +63,7 @@ class Characters extends React.Component {
     render() {
         return (
             <div className='characters' >
-                <h1>Characters</h1>
+                <h1 className='title'>Characters</h1>
 
                 <div className='buttons'>
                     <Button size='lg' onClick={(event) => this.prevPage(event)}>Back</Button>
