@@ -36,6 +36,8 @@ class Characters extends React.Component {
             .catch(err => console.error(err.message))
     }
 
+    // Call API url for the following page of data
+    // setState to new data after API call goes through
     nextPage = () => {
         axios.get(this.state.next)
             .then(res => {
@@ -48,6 +50,8 @@ class Characters extends React.Component {
             .catch(err => console.error(err.message))
     }
 
+    // Call API url for the previous page of data
+    // setState to new data after API call goes through
     prevPage = () => {
         axios.get(this.state.prev)
             .then(res => {
@@ -65,9 +69,10 @@ class Characters extends React.Component {
             <div className='characters' >
                 <h1 className='title'>Characters</h1>
 
-                <PageBtns 
-                next={() => this.nextPage()}
-                prev={() => this.prevPage()}
+                {/* Passing next and prev page functions as props to use inside of "PageBtns" */}
+                <PageBtns
+                    next={() => this.nextPage()}
+                    prev={() => this.prevPage()}
                 />
 
                 <ul className='character-list'>
@@ -89,9 +94,10 @@ class Characters extends React.Component {
                     ))}
                 </ul>
 
-                <PageBtns 
-                next={() => this.nextPage()}
-                prev={() => this.prevPage()}
+                {/* Passing next and prev page functions as props to use inside of "PageBtns" */}
+                <PageBtns
+                    next={() => this.nextPage()}
+                    prev={() => this.prevPage()}
                 />
             </div>
         )
