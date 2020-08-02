@@ -33,18 +33,26 @@ a:hover {
   text-align: center;
 }
 
-.character-list,
-.location-list {
-  display: inline-flex;
-  flex-wrap: wrap;
-}
-
 .characters {
   background-image: url('./assets/images/characters-bg.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.worlds {
+  background-image: url('./assets/images/locations-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.character-list,
+.location-list {
+  display: inline-flex;
+  flex-wrap: wrap;
 }
 
 .cards {
