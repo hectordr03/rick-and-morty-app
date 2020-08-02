@@ -76,6 +76,9 @@ class Characters extends React.Component {
                 />
 
                 <ul className='character-list'>
+
+                    {/* Iterate through results */}
+                    {/* Display data for each character inside a "Card" component */}
                     {this.state.results.map((character) => (
                         <div>
                             <Card className='cards' bg='info' key={character.id} >

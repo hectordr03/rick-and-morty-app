@@ -70,6 +70,7 @@ class Worlds extends React.Component {
                 />
 
                 <ul className='location-list'>
+                    
                     {/* Iterate through results */}
                     {/* Display data for each location inside a "Card" component */}
                     {this.state.results.map((place) => (
