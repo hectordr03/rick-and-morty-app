@@ -2,8 +2,8 @@ import React from 'react';
 import axios from 'axios';
 
 // Bootstrap imports
+import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import { Card } from 'react-bootstrap';
 
 
 class Worlds extends React.Component {
@@ -14,7 +14,6 @@ class Worlds extends React.Component {
             results: [],
             next: '',
             prev: '',
-            residents: [],
         }
     }
 
@@ -26,8 +25,6 @@ class Worlds extends React.Component {
                     next: res.data.info.next,
                     prev: res.data.info.prev,
                 });
-                console.log(this.state.results)
-                console.log(this.state.results[0].residents)
             })
             .catch(err => console.error(err.message))
     }
@@ -56,18 +53,6 @@ class Worlds extends React.Component {
             .catch(err => console.error(err.message))
     }
 
-    getResidents = (arr) => {
-        axios.get(arr)
-        Promise.all([arr])
-        .then(res => {
-            this.setState({
-                residents: res.data.results.residents
-            })
-            console.log(this.state.residents)
-        })
-        .catch(err => console.error(err.message))
-    }    
-
     render() {
         return (
             <div className='worlds'>
@@ -94,7 +79,6 @@ class Worlds extends React.Component {
                 <div className='buttons'>
                     <Button size='lg' onClick={(event) => this.prevPage(event)}>Prev</Button>
                     <Button size='lg' onClick={(event) => this.nextPage(event)}>Next</Button>
-                    <Button onclick={() => this.getResidents()}>Get residents</Button>
                 </div>
             </div>
         )

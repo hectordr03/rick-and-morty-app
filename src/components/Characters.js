@@ -20,8 +20,6 @@ class Characters extends React.Component {
             next: '',
             prev: '',
         }
-
-        this.nextPage = this.nextPage.bind(this);
     }
 
     componentDidMount() {
