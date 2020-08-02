@@ -35,3 +35,4 @@ export default Home;
 // Also I originally had a red border on it so I could see the div better as I coded but I ended up liking the way it looked, so I changed it to a yellow border to better fit the color themes on the show
 // The Welcome message was just so I could try some other Bootstrap components I haven't used yet. It was originally a Modal but I removed it because it got annoying to close everytime I refreshed the home page.
 // I settled on the "Jumbotron" component just to show what a message on the home page would look like
+// Also originally I wanted there to be a search bar that you can look up the characters/episodes/locations with but that seemed like a tough concept I was going to tackle later in the project but I didn't include it in the end.
