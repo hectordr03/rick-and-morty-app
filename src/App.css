@@ -1,3 +1,5 @@
+/* Importing custom font */
+
 @font-face {
   src: url(./assets/fonts/get-schwifty.ttf);
   font-family: schwifty;
@@ -75,7 +77,7 @@ a:hover {
   padding: 1em 1em;
   font-family: schwifty;
   -webkit-text-stroke: 2px black;
-  color: #4FB2C9;
+  color: #4fb2c9;
   font-size: 80px;
   background-color: rgba(0, 0, 0, 0.685);
 }
@@ -121,8 +123,21 @@ a:hover {
 
 /* End of Home component styling */
 
+/* Welcome component styling */
+
 .welcome {
   text-align: center;
   margin-left: 10em;
   margin-right: 10em;
 }
+
+/* End of Welcome component styling */
+
+/* Episode component styling */
+
+.episode-list {
+  color: white;
+  background-color: rgba(58, 60, 31, 0.612);
+}
+
+/* End of Episode component styling */

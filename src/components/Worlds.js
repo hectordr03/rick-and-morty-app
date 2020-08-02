@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card';
 
 // Components
 import PageBtns from './PageBtns';
+import Episodes from './Episodes';
 
 class Worlds extends React.Component {
     constructor(props) {
@@ -15,6 +16,10 @@ class Worlds extends React.Component {
             results: [],
             next: '',
             prev: '',
+
+            episodeResults: [],
+            episodeNext: '',
+            episodePrev: '',
         }
     }
 
@@ -26,6 +31,16 @@ class Worlds extends React.Component {
                     next: res.data.info.next,
                     prev: res.data.info.prev,
                 });
+            })
+        axios.get('https://rickandmortyapi.com/api/episode')
+            .then(res => {
+                this.setState({
+                    episodeResults: res.data.results,
+                    episodeNext: res.data.info.next,
+                    episodePrev: res.data.info.prev,
+                })
+                console.log(this.state.episodeNext)
+                console.log(this.state.episodePrev)
             })
             .catch(err => console.error(err.message))
     }
@@ -69,27 +84,26 @@ class Worlds extends React.Component {
                     prev={() => this.prevPage()}
                 />
 
-                <ul className='location-list'>
-                    
-                    {/* Iterate through results */}
-                    {/* Display data for each location inside a "Card" component */}
-                    {this.state.results.map((place) => (
-                        <div key={place.id} >
-                            <Card className='cards' bg='success'>
-                                <Card.Title>{place.name}</Card.Title>
-                                <Card.Text>
-                                    <li>Type: {place.type}</li>
-                                </Card.Text>
-                            </Card>
-                        </div>
-                    ))}
-                </ul>
+                {/* Iterate through results */}
+                {/* Display data for each location inside a "Card" component */}
+                {this.state.results.map((place) => (
+                    <div key={place.id} className='location-list'>
+                        <Card className='cards' bg='success'>
+                            <Card.Title>{place.name}</Card.Title>
+                            <Card.Text>
+                                <li>Type: {place.type}</li>
+                            </Card.Text>
+                        </Card>
+                    </div>
+                ))}
 
-                {/* Passing next and prev page functions as props to use inside of "PageBtns" */}
-                <PageBtns
-                    next={() => this.nextPage()}
-                    prev={() => this.prevPage()}
+                <Episodes 
+                episodes={this.state.episodeResults} 
+                nextPage={this.state.episodeNext}
+                prevPage={this.state.episodePrev}
                 />
+
+                
             </div>
         )
     }

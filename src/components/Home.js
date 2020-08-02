@@ -10,7 +10,7 @@ import characterImg from '../assets/images/r&m-characters.png'
 const Home = () => {
     return (
         <div className='home'>
-            <Welcome className='welcome' />
+            <Welcome />
             <div className='home-links'>
                 <a href='/characters' className='links'>
                     <h3>Characters</h3>
