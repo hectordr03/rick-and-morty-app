@@ -1,13 +1,16 @@
 import React from 'react';
 import axios from 'axios';
 
+// Bootstrap imports
+import Button from 'react-bootstrap/Button';
+import { Card } from 'react-bootstrap';
+
 class Worlds extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
             results: [],
-            info: [],
             next: '',
             prev: '',
         }
@@ -18,7 +21,6 @@ class Worlds extends React.Component {
             .then(res => {
                 this.setState({
                     results: res.data.results,
-                    info: res.data.info,
                     next: res.data.info.next,
                     prev: res.data.info.prev,
                 });
@@ -33,7 +35,6 @@ class Worlds extends React.Component {
             .then(res => {
                 this.setState({
                     results: res.data.results,
-                    info: res.data.info,
                     next: res.data.info.next,
                     prev: res.data.info.prev
                 })
@@ -46,7 +47,6 @@ class Worlds extends React.Component {
             .then(res => {
                 this.setState({
                     results: res.data.results,
-                    info: res.data.info,
                     next: res.data.info.next,
                     prev: res.data.info.prev
                 })
@@ -57,13 +57,30 @@ class Worlds extends React.Component {
     render() {
         return (
             <div>
-                {this.state.results.map((place) => (
-                    <li key={place.id}>
-                        {place.name}
-                    </li>
-                ))}
-                <button onClick={(event) => this.prevPage(event)}>Prev</button>
-                <button onClick={(event) => this.nextPage(event)}>Next</button>
+                <h1>Worlds and locations</h1>
+
+                <div className='buttons'>
+                    <Button size='lg' onClick={(event) => this.prevPage(event)}>Prev</Button>
+                    <Button size='lg' onClick={(event) => this.nextPage(event)}>Next</Button>
+                </div>
+
+                <ul className='location-list'>
+                    {this.state.results.map((place) => (
+                        <div>
+                            <Card className='cards' bg='success' key={place.id} >
+                                <Card.Title>{place.name}</Card.Title>
+                                <Card.Text>
+
+                                </Card.Text>
+                            </Card>
+                        </div>
+                    ))}
+                </ul>
+
+                <div className='buttons'>
+                    <Button size='lg' onClick={(event) => this.prevPage(event)}>Prev</Button>
+                    <Button size='lg' onClick={(event) => this.nextPage(event)}>Next</Button>
+                </div>
             </div>
         )
     }
