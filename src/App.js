@@ -8,7 +8,7 @@ import Characters from './components/Characters';
 import Worlds from './components/Worlds';
 
 // React Router
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 
 const App = () => {
