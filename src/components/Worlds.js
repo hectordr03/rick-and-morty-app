@@ -56,7 +56,7 @@ class Worlds extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='worlds'>
                 <h1>Worlds and locations</h1>
 
                 <div className='buttons'>

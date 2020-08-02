@@ -24,15 +24,15 @@ a:hover{
   height: 8em;
 }
 
-/* End of Header styling */
+/* End of HeaderNav styling */
 
-/* Characters comp styling */
+/* Characters/Worlds comp styling */
 
-.characters {
+.characters, .worlds {
   text-align: center;
 }
 
-.character-list {
+.character-list, .location-list {
   display: inline-flex;
   flex-wrap: wrap;
 }
@@ -48,7 +48,7 @@ a:hover{
   justify-content: space-evenly;
 }
 
-/* End of Characters comp styling */
+/* End of Characters/Worlds comp styling */
 
 /* Home component styling */
 
@@ -85,11 +85,3 @@ a:hover{
 }
 
 /* End of Home component styling */
-
-/* Welcome component styling */
-
-.welcome-message {
-  text-align: center;
-}
-
-/* End of Welcome component styling */
