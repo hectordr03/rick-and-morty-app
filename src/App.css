@@ -1,5 +1,4 @@
 /* Importing custom font */
-
 @font-face {
   src: url(./assets/fonts/get-schwifty.ttf);
   font-family: schwifty;
@@ -105,7 +104,8 @@ a:hover {
 
 .links {
   color: white;
-  border: 3px solid red;
+  border: 3px solid yellow;
+  border-radius: 1em;
   height: 30em;
   width: 20em;
   background-color: rgba(0, 0, 0, 0.767);
