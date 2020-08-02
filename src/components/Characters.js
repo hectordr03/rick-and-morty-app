@@ -1,13 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 
-// Components
-import DisplayInfo from '../components/DisplayInfo'
-
 // Bootstrap imports
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button'
-import { Modal } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
 
 class Characters extends React.Component {
     constructor(props) {
@@ -23,9 +19,6 @@ class Characters extends React.Component {
             results: [],
             next: '',
             prev: '',
-            episode: [],
-
-            modalIsOn: false,
         }
 
         this.nextPage = this.nextPage.bind(this);
@@ -67,58 +60,39 @@ class Characters extends React.Component {
             .catch(err => console.error(err.message))
     }
 
-    showModal = () => {
-        this.setState({
-            modalIsOn: true,
-        })
-    }
-
-    hideModal = () => {
-        this.setState({
-            modalIsOn: false,
-        })
-    }
-
     render() {
         return (
             <div className='characters' >
                 <h1>Characters</h1>
 
-                <Button onClick={(event) => this.prevPage(event)}>Back</Button>
-                <Button onClick={(event) => this.nextPage(event)}>Next</Button>
+                <div className='buttons'>
+                    <Button size='lg' onClick={(event) => this.prevPage(event)}>Back</Button>
+                    <Button size='lg' onClick={(event) => this.nextPage(event)}>Next</Button>
+                </div>
 
                 <ul className='character-list'>
                     {this.state.results.map((character) => (
                         <div>
-                            <a key={character.id} onClick={() => this.showModal()}>
-                                <Card className='cards' bg='info'>
-                                    <Card.Img src={character.image} alt='' className='images' />
-
-                                    <Card.Body>
-                                        <Card.Title>{character.name}</Card.Title>
-                                        <Card.Text>
-                                            <li>Status: {character.status}</li>
-                                            <li>Species: {character.species}</li>
-                                            <li>Origin: {character.origin.name}</li>
-                                            <li>Current location: {character.location.name}</li>
-                                        </Card.Text>
-                                    </Card.Body>
-                                </Card>
-                            </a>
-                            <Modal show={this.state.modalIsOn}>
-                                <Modal.Header>Episode list</Modal.Header>
-                                <Modal.Body>
-                                </Modal.Body>
-                                <Modal.Footer>
-                                    <Button onClick={() => this.hideModal()}>Close</Button>
-                                </Modal.Footer>
-                            </Modal>
+                            <Card className='cards' bg='info' key={character.id} >
+                                <Card.Img src={character.image} alt='' className='images' />
+                                <Card.Body>
+                                    <Card.Title>{character.name}</Card.Title>
+                                    <Card.Text>
+                                        <li>Status: {character.status}</li>
+                                        <li>Species: {character.species}</li>
+                                        <li>Origin: {character.origin.name}</li>
+                                        <li>Current location: {character.location.name}</li>
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
                         </div>
                     ))}
-
                 </ul>
-                <Button onClick={(event) => this.prevPage(event)}>Back</Button>
-                <Button onClick={(event) => this.nextPage(event)}>Next</Button>
+
+                <div className='buttons'>
+                    <Button size='lg' onClick={(event) => this.prevPage(event)}>Back</Button>
+                    <Button size='lg' onClick={(event) => this.nextPage(event)}>Next</Button>
+                </div>
             </div>
         )
     }

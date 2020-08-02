@@ -1,7 +1,6 @@
 import React from 'react';
 
 // Components
-import Welcome from '../components/Welcome'
 
 // Images
 import locationImg from '../assets/images/r&m-locations.png'
@@ -11,7 +10,6 @@ class Home extends React.Component {
     render() {
         return (
             <div className='home'>
-                {/* <Welcome /> */}
                 <a href='/characters' className='links'>
                     <h3>Characters</h3>
                     <img src={characterImg} alt='' className='link-images'/>

@@ -43,6 +43,11 @@ a:hover{
   margin: 0.5em 0.5em;
 }
 
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 /* End of Characters comp styling */
 
 /* Home component styling */
