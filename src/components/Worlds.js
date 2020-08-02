@@ -5,6 +5,8 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
+import PageBtns from './PageBtns';
+
 
 class Worlds extends React.Component {
     constructor(props) {
@@ -58,10 +60,10 @@ class Worlds extends React.Component {
             <div className='worlds'>
                 <h1 className='title'>Worlds and locations</h1>
 
-                <div className='buttons'>
-                    <Button size='lg' onClick={(event) => this.prevPage(event)}>Prev</Button>
-                    <Button size='lg' onClick={(event) => this.nextPage(event)}>Next</Button>
-                </div>
+                <PageBtns 
+                next={() => this.nextPage()}
+                prev={() => this.prevPage()}
+                />
 
                 <ul className='location-list'>
                     {this.state.results.map((place) => (
@@ -76,10 +78,10 @@ class Worlds extends React.Component {
                     ))}
                 </ul>
 
-                <div className='buttons'>
-                    <Button size='lg' onClick={(event) => this.prevPage(event)}>Prev</Button>
-                    <Button size='lg' onClick={(event) => this.nextPage(event)}>Next</Button>
-                </div>
+                <PageBtns 
+                next={() => this.nextPage()}
+                prev={() => this.prevPage()}
+                />
             </div>
         )
     }
