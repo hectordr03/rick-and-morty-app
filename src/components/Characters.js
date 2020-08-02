@@ -3,7 +3,9 @@ import axios from 'axios';
 
 // Bootstrap imports
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+
+// Components
+import PageBtns from '../components/PageBtns';
 
 class Characters extends React.Component {
     constructor(props) {
@@ -63,10 +65,10 @@ class Characters extends React.Component {
             <div className='characters' >
                 <h1 className='title'>Characters</h1>
 
-                <div className='buttons'>
-                    <Button size='lg' onClick={(event) => this.prevPage(event)}>Back</Button>
-                    <Button size='lg' onClick={(event) => this.nextPage(event)}>Next</Button>
-                </div>
+                <PageBtns 
+                next={() => this.nextPage()}
+                prev={() => this.prevPage()}
+                />
 
                 <ul className='character-list'>
                     {this.state.results.map((character) => (
@@ -87,10 +89,10 @@ class Characters extends React.Component {
                     ))}
                 </ul>
 
-                <div className='buttons'>
-                    <Button size='lg' onClick={(event) => this.prevPage(event)}>Back</Button>
-                    <Button size='lg' onClick={(event) => this.nextPage(event)}>Next</Button>
-                </div>
+                <PageBtns 
+                next={() => this.nextPage()}
+                prev={() => this.prevPage()}
+                />
             </div>
         )
     }

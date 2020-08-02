@@ -3,10 +3,9 @@ import axios from 'axios';
 
 // Bootstrap imports
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 
+// Components
 import PageBtns from './PageBtns';
-
 
 class Worlds extends React.Component {
     constructor(props) {
