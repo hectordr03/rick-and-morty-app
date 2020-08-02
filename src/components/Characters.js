@@ -25,6 +25,8 @@ class Characters extends React.Component {
     }
 
     componentDidMount() {
+        // Retrieving API data from call
+        // Set state using results of API call
         axios.get(this.state.url)
             .then(res => {
                 this.setState({
