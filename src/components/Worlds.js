@@ -70,7 +70,7 @@ class Worlds extends React.Component {
                             <Card className='cards' bg='success' key={place.id} >
                                 <Card.Title>{place.name}</Card.Title>
                                 <Card.Text>
-
+                                    <li>Type: {place.type}</li>
                                 </Card.Text>
                             </Card>
                         </div>

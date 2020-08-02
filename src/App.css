@@ -2,12 +2,12 @@ li {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
   color: black;
 }
 
-a:hover{
+a:hover {
   color: white;
   text-decoration: none;
 }
@@ -28,11 +28,13 @@ a:hover{
 
 /* Characters/Worlds comp styling */
 
-.characters, .worlds {
+.characters,
+.worlds {
   text-align: center;
 }
 
-.character-list, .location-list {
+.character-list,
+.location-list {
   display: inline-flex;
   flex-wrap: wrap;
 }
@@ -57,7 +59,9 @@ a:hover{
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
 
+.home-links {
   height: 100vh;
   width: auto;
 
@@ -85,3 +89,9 @@ a:hover{
 }
 
 /* End of Home component styling */
+
+.welcome {
+  text-align: center;
+  margin-left: 10em;
+  margin-right: 10em;
+}
