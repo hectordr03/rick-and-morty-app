@@ -39,6 +39,14 @@ a:hover {
   flex-wrap: wrap;
 }
 
+.characters {
+  background-image: url('./assets/images/characters-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .cards {
   height: auto;
   width: 20em;
@@ -56,6 +64,7 @@ a:hover {
 
 .home {
   background-image: url('./assets/images/rick-and-morty-background.jpg');
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
