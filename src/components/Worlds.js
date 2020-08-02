@@ -97,6 +97,12 @@ class Worlds extends React.Component {
                     </div>
                 ))}
 
+{/* Passing API data as props */}
+{/* I wanted to make next and prev page buttons for the episodes list, but I couldn't get them to work inside the component */}
+{/* The Episodes component was a last minute addition some things I would've done differently:
+1. Set state inside of home
+2. Pass state as props into Characters, Episodes and Worlds
+3. Display data using stateless components */}
                 <Episodes 
                 episodes={this.state.episodeResults} 
                 nextPage={this.state.episodeNext}
