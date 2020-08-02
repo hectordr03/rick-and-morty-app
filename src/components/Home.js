@@ -33,4 +33,5 @@ export default Home;
 
 // It took me a while to get good images for the link divs
 // Also I originally had a red border on it so I could see the div better as I coded but I ended up liking the way it looked, so I changed it to a yellow border to better fit the color themes on the show
-// The Welcome message was just so I could try some other Bootstrap components I haven't used yet. It was originally a Modal but I ended up removing it because I didn't know how to keep the closed after initially opeing it
+// The Welcome message was just so I could try some other Bootstrap components I haven't used yet. It was originally a Modal but I removed it because it got annoying to close everytime I refreshed the home page.
+// I settled on the "Jumbotron" component just to show what a message on the home page would look like
