@@ -66,3 +66,16 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+_____________________________________________________________
+
+#Rick and Morty App
+
+###The problem:
+You don't know anything about the Rick and Morty universe. With my app you can look up characters, locations and episodes from Rick and Morty.
+
+
+###Technologies:
+- React
+- React-Bootstrap
+- React-Router
