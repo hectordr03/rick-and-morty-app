@@ -85,4 +85,4 @@ You don't know anything about the Rick and Morty universe. With my app you can l
 ###Roadblocks
 - Searchbar: I originally wanted the app to have a search bar but could not incorporate in time.
 - Episode list: I created the episode list last and wanted to make it a stateless component in order to meet MVP. I was unable to pass my "nextPage" function effectively in this component so it only displays the first page of episodes in the API. In hindsight I would've set state to my home component and pass the data down to the "Characters" and "Worlds" child components.
-- 
+- I just tried the URL I pasted in this readme as well and the links for some reason do not work. I'm getting a "Page Not Found" error with a message "Looks like you've followed a broken link or entered a URL that doesn't exist on this site." I'm unsure why.
